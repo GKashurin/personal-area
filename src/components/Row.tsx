@@ -12,8 +12,8 @@ const Row: FC<IRowProps> = ({person, setIsShowPopup}) => {
 
 	return (
 		<tr>
-			<td>{person.name}</td>
 			<td>{person.surname}</td>
+			<td>{person.name}</td>
 			<td>{person.middleName}</td>
 			<td>{person.birthDate}</td>
 			<td>{person.position}</td>

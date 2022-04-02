@@ -7,7 +7,7 @@ import {
 } from 'react-router-dom';
 import {useSelector} from 'react-redux';
 // @ts-ignore
-import SignIn from './components/SignIn.tsx'
+import SignIn from './pages/SignIn.tsx'
 // @ts-ignore
 import ContactsPage from './pages/ContactsPage.tsx';
 import {IRootState} from './types';

@@ -41,8 +41,8 @@ const Popup: FC<IPopupProps> = ({isShowPopup, setIsShowPopup}) => {
 			<div
 				className={isShowPopup && !isStartAnimation ? 'popup__container' : 'popup__container popup__container_closed'}>
 				<Formik initialValues={{
-					name: editPerson ? editPerson.name : '',
 					surname: editPerson ? editPerson.surname : '',
+					name: editPerson ? editPerson.name : '',
 					middleName: editPerson ? editPerson.middleName : '',
 					birthDate: editPerson ? editPerson.birthDate : '',
 					position: editPerson ? editPerson.position : '',
@@ -62,6 +62,15 @@ const Popup: FC<IPopupProps> = ({isShowPopup, setIsShowPopup}) => {
 					  }) => (
 						<div>
 							<input
+								name='surname'
+								type='text'
+								className='input'
+								placeholder='Фамилия*'
+								onChange={handleChange}
+								value={values.surname}
+								autoComplete='off'
+							/>
+							<input
 								name='name'
 								type='text'
 								className='input'
@@ -71,15 +80,6 @@ const Popup: FC<IPopupProps> = ({isShowPopup, setIsShowPopup}) => {
 								autoComplete='off'
 							/>
 							{touched.surname && errors.surname && <p className='error'>{errors.surname}</p>}
-							<input
-								name='surname'
-								type='text'
-								className='input'
-								placeholder='Фамилия*'
-								onChange={handleChange}
-								value={values.surname}
-								autoComplete='off'
-							/>
 							<input
 								name='middleName'
 								type='text'

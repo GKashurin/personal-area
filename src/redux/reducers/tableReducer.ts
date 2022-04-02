@@ -6,8 +6,8 @@ const initialState = {
 	list: [
 		{
 			id: 0,
-			name: 'Иван',
 			surname: 'Иванов',
+			name: 'Иван',
 			middleName: 'Иванович',
 			birthDate: '14.01.1996',
 			position: 'Грузчик',
